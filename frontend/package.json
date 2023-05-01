@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sumandey07.github.io/MERN-chat-app",
   "proxy": "http://127.0.0.1:8000",
   "dependencies": {
     "@chakra-ui/react": "^2.5.5",
