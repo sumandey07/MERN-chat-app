@@ -9,7 +9,6 @@
   "author": "Suman Dey",
   "license": "ISC",
   "dependencies": {
-    "@chakra-ui/icons": "^2.0.19",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^16.0.3",
