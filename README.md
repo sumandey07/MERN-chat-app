@@ -7,4 +7,6 @@ The Actual live site is available at https://letustalk.netlify.app/
 
 The Actual live site is also available at https://letustalk-c8518.web.app/
 
+The Actual live site is also available at https://letustalk.vercel.app/
+
 Visit Here to Explore.
