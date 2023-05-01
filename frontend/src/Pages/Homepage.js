@@ -35,7 +35,7 @@ function Homepage() {
         borderWidth="3px"
       >
         <Text fontSize="4xl" fontFamily="Work sans">
-          Let Us Talking
+          Let Us Talk
         </Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
