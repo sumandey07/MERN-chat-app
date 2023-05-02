@@ -23,9 +23,9 @@ function Homepage() {
   }, [history]);
 
   return (
-    <Container maxW="xl" centerContent>
+    <Container maxW="xl" centerContent marginBottom="30">
       <Box
-        d="flex"
+        display="flex"
         textAlign="center"
         p={3}
         bg="white"
@@ -34,15 +34,41 @@ function Homepage() {
         borderRadius="xl"
         borderWidth="3px"
       >
-        <Text fontSize="4xl" fontFamily="Work sans">
+        <Text
+          fontSize="5xl"
+          fontFamily="Work sans"
+          bgGradient="linear(to-l, #7928CA, #FF0080)"
+          bgClip="text"
+          fontWeight="extrabold"
+        >
           Let Us Talk
         </Text>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
         <Tabs isFitted variant="soft-rounded">
           <TabList mb="1em">
-            <Tab>Login</Tab>
-            <Tab>Sign Up</Tab>
+            <Tab
+              as="button"
+              p={2}
+              color="navy"
+              fontWeight="bold"
+              _hover={{
+                bgGradient: "linear(to-r, teal.500, green.500)",
+              }}
+            >
+              Login
+            </Tab>
+            <Tab
+              as="button"
+              p={2}
+              color="navy"
+              fontWeight="bold"
+              _hover={{
+                bgGradient: "linear(to-r, teal.500, pink.500)",
+              }}
+            >
+              Sign Up
+            </Tab>
           </TabList>
           <TabPanels>
             <TabPanel>

@@ -14,7 +14,9 @@ import { useHistory } from "react-router";
 
 const Signup = () => {
   const [show, setShow] = useState(false);
+  const [conf, setConf] = useState(false);
   const handleClick = () => setShow(!show);
+  const handleClicks = () => setConf(!conf);
   const toast = useToast();
   const history = useHistory();
 
@@ -135,7 +137,7 @@ const Signup = () => {
   };
 
   return (
-    <VStack spacing="5px">
+    <VStack spacing="10px">
       <FormControl id="first-name" isRequired>
         <FormLabel>Name</FormLabel>
         <Input
@@ -151,7 +153,7 @@ const Signup = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormControl>
-      <FormControl id="password" isRequired>
+      <FormControl isRequired>
         <FormLabel>Password</FormLabel>
         <InputGroup size="md">
           <Input
@@ -166,17 +168,17 @@ const Signup = () => {
           </InputRightElement>
         </InputGroup>
       </FormControl>
-      <FormControl id="password" isRequired>
+      <FormControl isRequired>
         <FormLabel>Confirm Password</FormLabel>
         <InputGroup size="md">
           <Input
-            type={show ? "text" : "password"}
+            type={conf ? "text" : "password"}
             placeholder="Confirm password"
-            onChange={(e) => setConfirmpassword(e.target.value)}
+            onChange={(el) => setConfirmpassword(el.target.value)}
           />
           <InputRightElement width="4.5rem">
-            <Button h="1.75rem" size="sm" onClick={handleClick}>
-              {show ? "Hide" : "Show"}
+            <Button h="1.75rem" size="sm" onClick={handleClicks}>
+              {conf ? "Hide" : "Show"}
             </Button>
           </InputRightElement>
         </InputGroup>
