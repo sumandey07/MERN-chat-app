@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://127.0.0.1:8000",
+  "homepage": "https://letustalk-c8518.web.app",
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
     "@chakra-ui/layout": "^2.1.19",
