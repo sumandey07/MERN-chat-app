@@ -47,6 +47,7 @@ const MyChats = ({ fetchAgain }) => {
     <Box
       display={{ base: selectedChat ? "none" : "flex", md: "flex" }}
       alignItems="center"
+      flexDirection="column"
       p={3}
       bg="white"
       w={{ base: "100%", md: "31%" }}
@@ -58,7 +59,8 @@ const MyChats = ({ fetchAgain }) => {
         px={3}
         fontSize={{ base: "28px", md: "30px" }}
         fontFamily="Work sans"
-        d="flex"
+        display="flex"
+        flexDirection="row"
         w="100%"
         justifyContent="space-between"
         alignItems="center"

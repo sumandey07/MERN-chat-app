@@ -129,11 +129,10 @@ function SideDrawer() {
     <>
       <Box
         justifyContent="space-between"
-        flexDirection="row"
         bg="white"
         w="100%"
         p="5px 10px 5px 10px"
-        borderWidth="5px"
+        borderWidth="4px"
       >
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
           <Button variant="ghost" onClick={onOpen}>
@@ -175,8 +174,7 @@ function SideDrawer() {
         <Text
           fontSize="2xl"
           fontFamily="Work sans"
-          d="flex"
-          justifyContent="space-between"
+          maxW="md"
           bgGradient="linear(to-l, teal.500, pink.500)"
           bgClip="text"
           fontWeight="extrabold"

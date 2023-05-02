@@ -20,7 +20,7 @@ const GroupMemberModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const toast = useToast();
 
-  const { selectedChat, setSelectedChat, user } = ChatState();
+  const { selectedChat } = ChatState();
 
   return (
     <>
