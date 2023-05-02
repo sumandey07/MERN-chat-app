@@ -1,5 +1,5 @@
 import { Avatar } from "@chakra-ui/avatar";
-import { Box, Text } from "@chakra-ui/layout";
+import { Box, Text } from "@chakra-ui/react";
 import { ChatState } from "../../Context/ChatProvider";
 
 const UserListItem = ({ handleFunction }) => {

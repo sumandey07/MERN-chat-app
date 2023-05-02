@@ -1,7 +1,7 @@
 import { Button } from "@chakra-ui/button";
 import { useDisclosure } from "@chakra-ui/hooks";
 import { Input } from "@chakra-ui/input";
-import { Box, Text } from "@chakra-ui/layout";
+import { Box, Text } from "@chakra-ui/react";
 import {
   Menu,
   MenuButton,
@@ -127,7 +127,7 @@ function SideDrawer() {
       <Box
         d="flex"
         justifyContent="space-between"
-        alignItems="center"
+        flexDirection="row"
         bg="white"
         w="100%"
         p="5px 10px 5px 10px"
