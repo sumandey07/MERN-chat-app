@@ -1,12 +1,10 @@
 import { AddIcon } from "@chakra-ui/icons";
-import { Box, Stack, Text } from "@chakra-ui/react";
-import { useToast } from "@chakra-ui/toast";
+import { Button, useToast, Box, Stack, Text } from "@chakra-ui/react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { getSender } from "../config/ChatLogics";
 import ChatLoading from "./ChatLoading";
 import GroupChatModal from "./miscellaneous/GroupChatModal";
-import { Button } from "@chakra-ui/react";
 import { ChatState } from "../Context/ChatProvider";
 
 const MyChats = ({ fetchAgain }) => {
@@ -48,7 +46,6 @@ const MyChats = ({ fetchAgain }) => {
   return (
     <Box
       d={{ base: selectedChat ? "none" : "flex", md: "flex" }}
-      flexDir="column"
       alignItems="center"
       p={3}
       bg="white"
