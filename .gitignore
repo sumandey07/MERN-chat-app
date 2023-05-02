@@ -27,4 +27,4 @@ package-lock.json
 node_modules/
 /frontend/node_modules/
 .env
-.firebase
+.cache
