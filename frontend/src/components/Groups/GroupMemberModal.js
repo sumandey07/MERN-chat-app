@@ -3,22 +3,20 @@ import {
   ModalOverlay,
   ModalContent,
   ModalHeader,
-  ModalFooter,
   ModalBody,
   ModalCloseButton,
-  Button,
   useDisclosure,
-  useToast,
   Box,
   IconButton,
+  VStack,
+  StackDivider,
 } from "@chakra-ui/react";
 import { ChatState } from "../../Context/ChatProvider";
-import UserBadgeItem from "../userAvatar/UserBadgeItem";
 import { MdSupervisorAccount } from "react-icons/md";
+import UserListItem from "../userAvatar/UserListItem";
 
 const GroupMemberModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const toast = useToast();
 
   const { selectedChat } = ChatState();
 
@@ -35,24 +33,26 @@ const GroupMemberModal = () => {
             display="flex"
             justifyContent="center"
           >
-            {selectedChat.chatName}
+            {selectedChat.chatName.toUpperCase()}
           </ModalHeader>
-
           <ModalCloseButton />
           <ModalBody display="flex" flexDirection="column" alignItems="center">
-            <Box w="100%" display="flex" flexWrap="wrap" pb={3}>
-              {selectedChat.users.map((u) => (
-                <UserBadgeItem
-                  key={u._id}
-                  user={u}
-                  admin={selectedChat.groupAdmin}
-                />
-              ))}
-            </Box>
+            <VStack
+              divider={<StackDivider borderColor="gray.200" />}
+              spacing={3}
+              align="stretch"
+            >
+              <Box w="100%" display="flex" flexWrap="wrap" pb={3}>
+                {selectedChat.users.map((u) => (
+                  <UserListItem
+                    key={u._id}
+                    user={u}
+                    admin={selectedChat.groupAdmin}
+                  />
+                ))}
+              </Box>
+            </VStack>
           </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="red">Leave Group</Button>
-          </ModalFooter>
         </ModalContent>
       </Modal>
     </>

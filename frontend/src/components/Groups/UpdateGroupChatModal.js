@@ -220,7 +220,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
             display="flex"
             justifyContent="center"
           >
-            {selectedChat.chatName}
+            {selectedChat.chatName.toUpperCase()}
           </ModalHeader>
 
           <ModalCloseButton />

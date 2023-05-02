@@ -7,19 +7,19 @@ import {
   Box,
   Text,
 } from "@chakra-ui/react";
-import "./styles.css";
-import { getSender, getSenderFull } from "../config/ChatLogics";
+import "../styles.css";
+import { getSender, getSenderFull } from "../../config/ChatLogics";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ArrowBackIcon } from "@chakra-ui/icons";
-import ProfileModal from "./miscellaneous/ProfileModal";
-import ScrollableChat from "./ScrollableChat";
+import ProfileModal from "../miscellaneous/ProfileModal";
+import ScrollableChat from "../ScrollableChat";
 import Lottie from "lottie-react";
-import animationData from "../animations/typing.json";
+import animationData from "../../animations/typing.json";
 import io from "socket.io-client";
-import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
-import { ChatState } from "../Context/ChatProvider";
-import GroupMemberModal from "./miscellaneous/GroupMemberModal";
+import UpdateGroupChatModal from "../Groups/UpdateGroupChatModal";
+import { ChatState } from "../../Context/ChatProvider";
+import GroupMemberModal from "../Groups/GroupMemberModal";
 const ENDPOINT = "http://localhost:8000";
 var socket, selectedChatCompare;
 

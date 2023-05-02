@@ -129,10 +129,12 @@ function SideDrawer() {
     <>
       <Box
         justifyContent="space-between"
+        display="flex"
+        flexDirection="row"
         bg="white"
         w="100%"
-        p="5px 10px 5px 10px"
-        borderWidth="4px"
+        p="20px 10px 20px 10px"
+        borderWidth="6px"
       >
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
           <Button variant="ghost" onClick={onOpen}>
@@ -172,14 +174,13 @@ function SideDrawer() {
           </DrawerContent>
         </Drawer>
         <Text
-          fontSize="2xl"
+          fontSize="3xl"
           fontFamily="Work sans"
-          maxW="md"
           bgGradient="linear(to-l, teal.500, pink.500)"
           bgClip="text"
           fontWeight="extrabold"
         >
-          Let Us Talk
+          Let Us <span>Talk</span>
         </Text>
         <Box>
           <Menu>
