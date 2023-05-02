@@ -206,7 +206,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
   return (
     <>
       <IconButton
-        d={{ base: "flex" }}
+        display={{ base: "flex" }}
         icon={<MdSupervisorAccount />}
         onClick={onOpen}
       />

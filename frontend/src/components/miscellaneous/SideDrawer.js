@@ -128,9 +128,8 @@ function SideDrawer() {
   return (
     <>
       <Box
-        display="flex"
         justifyContent="space-between"
-        flexDirection="column"
+        flexDirection="row"
         bg="white"
         w="100%"
         p="5px 10px 5px 10px"
@@ -144,10 +143,47 @@ function SideDrawer() {
             </Text>
           </Button>
         </Tooltip>
-        <Text fontSize="2xl" fontFamily="Work sans">
+        <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader borderBottomWidth="1px">Search Users</DrawerHeader>
+            <DrawerBody>
+              <Box d="flex" pb={2}>
+                <Input
+                  placeholder="Search by name or email"
+                  mr={2}
+                  value={search}
+                  onChange={(e) => setSearch(e.target.value)}
+                />
+                <Button onClick={handleSearch}>Go</Button>
+              </Box>
+              {loading ? (
+                <ChatLoading />
+              ) : (
+                searchResult?.map((user) => (
+                  <UserListItem
+                    key={user._id}
+                    user={user}
+                    handleFunction={() => accessChat(user._id)}
+                  />
+                ))
+              )}
+              {loadingChat && <Spinner ml="auto" display="flex" />}
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+        <Text
+          fontSize="2xl"
+          fontFamily="Work sans"
+          d="flex"
+          justifyContent="space-between"
+          bgGradient="linear(to-l, teal.500, pink.500)"
+          bgClip="text"
+          fontWeight="extrabold"
+        >
           Let Us Talk
         </Text>
-        <div>
+        <Box>
           <Menu>
             <MenuButton p={1}>
               <NotificationBadge
@@ -190,38 +226,8 @@ function SideDrawer() {
               <MenuItem onClick={logoutHandler}>Logout</MenuItem>
             </MenuList>
           </Menu>
-        </div>
+        </Box>
       </Box>
-
-      <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
-        <DrawerOverlay />
-        <DrawerContent>
-          <DrawerHeader borderBottomWidth="1px">Search Users</DrawerHeader>
-          <DrawerBody>
-            <Box display="flex" pb={2}>
-              <Input
-                placeholder="Search by name or email"
-                mr={2}
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-              />
-              <Button onClick={handleSearch}>Go</Button>
-            </Box>
-            {loading ? (
-              <ChatLoading />
-            ) : (
-              searchResult?.map((user) => (
-                <UserListItem
-                  key={user._id}
-                  user={user}
-                  handleFunction={() => accessChat(user._id)}
-                />
-              ))
-            )}
-            {loadingChat && <Spinner ml="auto" display="flex" />}
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
     </>
   );
 }

@@ -24,7 +24,7 @@ const ProfileModal = ({ user, children }) => {
         <span onClick={onOpen}>{children}</span>
       ) : (
         <IconButton
-          d={{ base: "flex" }}
+          display={{ base: "flex" }}
           icon={<MdAccountCircle />}
           onClick={onOpen}
         />
@@ -42,7 +42,11 @@ const ProfileModal = ({ user, children }) => {
             {user.name}
           </ModalHeader>
           <ModalCloseButton />
-          <ModalBody display="flex" flexDirection="column" justifyContent="space-between">
+          <ModalBody
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+          >
             <Center>
               <Image
                 borderRadius="full"

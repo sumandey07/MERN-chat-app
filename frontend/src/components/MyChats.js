@@ -45,7 +45,7 @@ const MyChats = ({ fetchAgain }) => {
 
   return (
     <Box
-      d={{ base: selectedChat ? "none" : "flex", md: "flex" }}
+      display={{ base: selectedChat ? "none" : "flex", md: "flex" }}
       alignItems="center"
       p={3}
       bg="white"
@@ -58,7 +58,7 @@ const MyChats = ({ fetchAgain }) => {
         px={3}
         fontSize={{ base: "28px", md: "30px" }}
         fontFamily="Work sans"
-        display="flex"
+        d="flex"
         w="100%"
         justifyContent="space-between"
         alignItems="center"
@@ -66,7 +66,7 @@ const MyChats = ({ fetchAgain }) => {
         My Chats
         <GroupChatModal>
           <Button
-            display="flex"
+            d="flex"
             fontSize={{ base: "17px", md: "10px", lg: "17px" }}
             rightIcon={<AddIcon />}
           >
@@ -75,7 +75,7 @@ const MyChats = ({ fetchAgain }) => {
         </GroupChatModal>
       </Box>
       <Box
-        display="flex"
+        d="flex"
         flexDirection="column"
         p={3}
         bg="#F8F8F8"
