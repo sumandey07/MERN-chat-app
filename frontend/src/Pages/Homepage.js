@@ -35,19 +35,14 @@ function Homepage() {
           display="flex"
           flexDirection="row"
           alignSelf="center"
-          p={3}
+          p={6}
           px={32}
-          pb={5}
+          pb={6}
           bg="white"
           w="100%"
           m="40px 0 15px 0"
           borderRadius="xl"
-          borderWidth="3px"
-          bgGradient={[
-            "linear(to-tr, teal.300, yellow.400)",
-            "linear(to-t, blue.200, teal.500)",
-            "linear(to-b, orange.100, purple.300)",
-          ]}
+          bgGradient="linear(to-l, teal.100, gray.300)"
         >
           <ReactSVG src="logo.svg" />
           <Text
