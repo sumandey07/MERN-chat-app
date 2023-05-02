@@ -20,7 +20,7 @@ import { useState } from "react";
 import { ChatState } from "../../Context/ChatProvider";
 import UserBadgeItem from "../userAvatar/UserBadgeItem";
 import UserListItem from "../userAvatar/UserListItem";
-import { MdSupervisorAccount } from "react-icons/md";
+import { GrUserSettings } from "react-icons/gr";
 
 const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -207,7 +207,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
     <>
       <IconButton
         display={{ base: "flex" }}
-        icon={<MdSupervisorAccount />}
+        icon={<GrUserSettings />}
         onClick={onOpen}
       />
 
