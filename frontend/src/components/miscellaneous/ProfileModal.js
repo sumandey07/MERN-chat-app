@@ -1,4 +1,4 @@
-import { ViewIcon } from "@chakra-ui/icons";
+import { MdAccountCircle } from "react-icons/md";
 import {
   Modal,
   ModalOverlay,
@@ -22,7 +22,11 @@ const ProfileModal = ({ user, children }) => {
       {children ? (
         <span onClick={onOpen}>{children}</span>
       ) : (
-        <IconButton d={{ base: "flex" }} icon={<ViewIcon />} onClick={onOpen} />
+        <IconButton
+          d={{ base: "flex" }}
+          icon={<MdAccountCircle />}
+          onClick={onOpen}
+        />
       )}
       <Modal size="lg" onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />
