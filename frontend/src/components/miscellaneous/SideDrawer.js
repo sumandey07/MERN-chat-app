@@ -34,6 +34,9 @@ import { Effect } from "react-notification-badge";
 import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../Context/ChatProvider";
+import AboutModal from "./AboutModal";
+import { MdAccountCircle, MdInfoOutline, MdLogout } from "react-icons/md";
+import { ReactSVG } from "react-svg";
 
 function SideDrawer() {
   const [search, setSearch] = useState("");
@@ -173,15 +176,20 @@ function SideDrawer() {
             </DrawerBody>
           </DrawerContent>
         </Drawer>
-        <Text
-          fontSize="3xl"
-          fontFamily="Work sans"
-          bgGradient="linear(to-l, teal.500, pink.500)"
-          bgClip="text"
-          fontWeight="extrabold"
-        >
-          Let Us <span>Talk</span>
-        </Text>
+        <Box display="flex" flexDirection="row">
+          <ReactSVG src="logo.svg" />
+          <Text
+            fontSize="3xl"
+            fontFamily="helvetica"
+            bgGradient="linear(to-l, teal.500, pink.500)"
+            bgClip="text"
+            fontWeight="extrabold"
+            cursor="pointer"
+            href="#"
+          >
+            Let Us Talk
+          </Text>
+        </Box>
         <Box>
           <Menu>
             <MenuButton p={1}>
@@ -219,10 +227,23 @@ function SideDrawer() {
             </MenuButton>
             <MenuList>
               <ProfileModal user={user}>
-                <MenuItem>My Profile</MenuItem>{" "}
+                <MenuItem fontSize="lg" icon={<MdAccountCircle />}>
+                  My Profile
+                </MenuItem>{" "}
               </ProfileModal>
+              <AboutModal>
+                <MenuItem fontSize="lg" icon={<MdInfoOutline />}>
+                  About
+                </MenuItem>{" "}
+              </AboutModal>
               <MenuDivider />
-              <MenuItem onClick={logoutHandler}>Logout</MenuItem>
+              <MenuItem
+                onClick={logoutHandler}
+                fontSize="lg"
+                icon={<MdLogout />}
+              >
+                Logout
+              </MenuItem>
             </MenuList>
           </Menu>
         </Box>
