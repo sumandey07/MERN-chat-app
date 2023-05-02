@@ -75,7 +75,7 @@ const MyChats = ({ fetchAgain }) => {
         </GroupChatModal>
       </Box>
       <Box
-        d="flex"
+        display="flex"
         flexDirection="column"
         p={3}
         bg="#F8F8F8"
@@ -94,6 +94,7 @@ const MyChats = ({ fetchAgain }) => {
                 color={selectedChat === chat ? "white" : "black"}
                 px={3}
                 py={2}
+                display="flexbox"
                 borderRadius="lg"
                 key={chat._id}
               >
