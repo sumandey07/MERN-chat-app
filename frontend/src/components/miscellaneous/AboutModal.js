@@ -51,7 +51,7 @@ const AboutModal = ({ children }) => {
           >
             <ReactSVG src="logo.svg" />
             <Text p={5}>
-              Let Us Talk is a Realtime Online Chat Application developed by
+              Let Us Talk is a Realtime Online Chat Application developed and maintained by
               SUMAN KUMAR DEY. If you LIKE this App then STAR the repository at
               Github
             </Text>

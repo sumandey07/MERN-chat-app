@@ -9,12 +9,12 @@ import { BrowserRouter } from "react-router-dom";
 const root = createRoot(document.getElementById("root"));
 root.render(
   <StrictMode>
-    <ChakraProvider>
-      <BrowserRouter>
-        <ChatProvider>
+    <BrowserRouter>
+      <ChatProvider>
+        <ChakraProvider>
           <App />
-        </ChatProvider>
-      </BrowserRouter>
-    </ChakraProvider>
+        </ChakraProvider>
+      </ChatProvider>
+    </BrowserRouter>
   </StrictMode>
 );

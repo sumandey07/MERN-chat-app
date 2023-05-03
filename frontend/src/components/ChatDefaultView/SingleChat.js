@@ -20,7 +20,7 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "../Groups/UpdateGroupChatModal";
 import { ChatState } from "../../Context/ChatProvider";
 import GroupMemberModal from "../Groups/GroupMemberModal";
-const ENDPOINT = "http://localhost:8000";
+const ENDPOINT = "http://127.0.0.1:8000";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
