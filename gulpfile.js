@@ -4,7 +4,7 @@ const fs = require("fs");
 const zip = require("gulp-zip");
 const log = require("fancy-log");
 const webpack_stream = require("webpack-stream");
-const webpack_config = require("./webpack.config.js");
+const webpack_config = require("./backend/webpack.config.js");
 const { setEnvironmentData } = require("worker_threads");
 var exec = require("child_process").exec;
 
