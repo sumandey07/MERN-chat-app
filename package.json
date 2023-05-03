@@ -2,18 +2,16 @@
   "name": "let-us-talk",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon backend/server.js",
-    "build": "webpack --mode=production",
-    "prod-build": "gulp"
+    "start": "nodemon backend/server.js"
   },
   "author": "Suman Dey",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
+    "del": "^7.0.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
@@ -28,6 +26,8 @@
     "socket.io-client": "^4.6.1"
   },
   "devDependencies": {
-    "del": "^7.0.0"
+    "child_process": "^1.0.2",
+    "gulp-zip": "^5.1.0",
+    "webpack-stream": "^7.0.0"
   }
 }
