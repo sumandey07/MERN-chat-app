@@ -30,7 +30,7 @@ function Homepage() {
 
   return (
     <>
-      <Container maxW="xl" centerContent marginBottom="30">
+      <Container maxW="xl" centercontent="true" marginBottom="30">
         <Box
           display="flex"
           flexDirection="row"
@@ -92,7 +92,7 @@ function Homepage() {
           </Tabs>
         </Box>
         <VStack
-          centerContent
+          centercontent="true"
           marginBottom="30"
           position="Bottom"
           width="100%"
@@ -101,7 +101,7 @@ function Homepage() {
           <Text textAlign="center" p="1px 0px 8px 0px" fontWeight="bold">
             Join Our Community Below
           </Text>
-          <HStack centerContent>
+          <HStack centercontent="true">
             <Button colorScheme="blackAlpha" leftIcon={<FaGithub />}>
               <Link href="https://github.com/sumandey07" isExternal>
                 Github
