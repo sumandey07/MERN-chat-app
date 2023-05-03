@@ -1,12 +1,12 @@
-const { src, dest, series, parallel } = require("gulp");
-const del = require("del");
-const fs = require("fs");
-const zip = require("gulp-zip");
-const log = require("fancy-log");
-const webpack_stream = require("webpack-stream");
-const webpack_config = require("./backend/webpack.config.js");
-const { setEnvironmentData } = require("worker_threads");
-var exec = require("child_process").exec;
+import { src, dest, series, parallel } from "gulp";
+import del from "del";
+import { existsSync, mkdirSync } from "fs";
+import zip from "gulp-zip";
+import log from "fancy-log";
+import webpack_stream from "webpack-stream";
+import webpack_config from "./backend/webpack.config.js";
+import { setEnvironmentData } from "worker_threads";
+import { exec } from "child_process";
 
 const paths = {
   prod_build: "../prod-build",
@@ -24,8 +24,8 @@ function clean() {
 function createProdBuildFolder() {
   const dir = paths.prod_build;
   log(`Creating the folder if not exist  ${dir}`);
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir);
+  if (!existsSync(dir)) {
+    mkdirSync(dir);
     log("📁  folder created:", dir);
   }
 
@@ -67,10 +67,11 @@ function zippingTask() {
     .pipe(dest(`${paths.prod_build}`));
 }
 
-exports.default = series(
+const _default = series(
   clean,
   createProdBuildFolder,
   buildReactCodeTask,
   parallel(copyReactCodeTask, copyNodeJSCodeTask),
   zippingTask
 );
+export { _default as default };

@@ -25,5 +25,8 @@
     "react-router": "^5.3.4",
     "socket.io": "^4.6.1",
     "socket.io-client": "^4.6.1"
+  },
+  "devDependencies": {
+    "del": "^7.0.0"
   }
 }
