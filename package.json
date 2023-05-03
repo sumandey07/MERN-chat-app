@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "nodemon backend/server.js",
-    "build":"webpack --mode=production"
+    "build": "webpack --mode=production",
+    "prod-build": "ENVIRONMENT='production' gulp"
   },
   "author": "Suman Dey",
   "license": "ISC",

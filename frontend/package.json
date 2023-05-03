@@ -48,8 +48,7 @@
   "scripts": {
     "dev": "webpack serve",
     "start": "react-scripts start",
-    "build": "ENVIRONMENT=$ENVIRONMENT webpack",
-    "prod-build":"ENVIRONMENT='production' gulp",
+    "build": "webpack --mode=production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

@@ -6,6 +6,7 @@ const environment = process.env.ENVIRONMENT;
 console.log("environment:::::", environment);
 
 module.exports = {
+  mode: "production",
   entry: "./server.js",
   output: {
     path: path.resolve(__dirname, "dist"),
