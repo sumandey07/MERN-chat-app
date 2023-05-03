@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/MERN-chat-app/static/css/main.a6444efe.css",
-    "main.js": "/MERN-chat-app/static/js/main.6d209f8c.js",
+    "main.js": "/MERN-chat-app/static/js/main.7b8a6ed2.js",
     "static/media/background.png": "/MERN-chat-app/static/media/background.0db65580ccfb8a6d5846.png",
     "index.html": "/MERN-chat-app/index.html",
     "main.a6444efe.css.map": "/MERN-chat-app/static/css/main.a6444efe.css.map",
-    "main.6d209f8c.js.map": "/MERN-chat-app/static/js/main.6d209f8c.js.map"
+    "main.7b8a6ed2.js.map": "/MERN-chat-app/static/js/main.7b8a6ed2.js.map"
   },
   "entrypoints": [
     "static/css/main.a6444efe.css",
-    "static/js/main.6d209f8c.js"
+    "static/js/main.7b8a6ed2.js"
   ]
 }
