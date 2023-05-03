@@ -43,15 +43,12 @@
     },
     "lottie-react": {
       "react": "^0.14.7 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
-    },
-    "lottie-web": {
-      "react": "^0.14.7 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
     }
   },
   "scripts": {
-    "dev":"webpack serve",
+    "dev": "webpack serve",
     "start": "react-scripts start",
-    "build": "webpack",
+    "build": "webpack --mode=production",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
