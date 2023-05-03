@@ -32,13 +32,20 @@ function createProdBuildFolder() {
   return Promise.resolve("the value is ignored");
 }
 
+gulp.task("apply-prod-environment", function () {
+  process.env.NODE_ENV = "production";
+});
+
 function buildReactCodeTask(cb) {
   log("building React code into the directory");
-  return exec("cd ../ui && npm run build", function (err, stdout, stderr) {
-    log(stdout);
-    log(stderr);
-    cb(err);
-  });
+  return exec(
+    "cd ../frontend && npm run build",
+    function (err, stdout, stderr) {
+      log(stdout);
+      log(stderr);
+      cb(err);
+    }
+  );
 }
 
 function copyReactCodeTask() {
