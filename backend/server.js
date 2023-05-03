@@ -53,8 +53,9 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://127.0.0.1:3000",
+    // origin: "http://127.0.0.1:3000",
     // origin: "https://letustalk-c8518.web.app", //enable while in production mode
+    origin: "https://sumandey07.github.io/MERN-chat-app",
     credentials: true,
   },
 });
